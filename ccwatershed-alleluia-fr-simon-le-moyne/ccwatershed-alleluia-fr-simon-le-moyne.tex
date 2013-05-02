@@ -3,7 +3,8 @@
 
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
-\documentclass[11pt]{article} % use larger type; default would be 10pt
+%\documentclass[11pt]{article} % use larger type; default would be 10pt
+\documentclass[11pt]{book} % use larger type; default would be 10pt
 
 % usual packages loading:
 \usepackage{luatextra}
@@ -22,15 +23,16 @@
 \usepackage[utf8]{luainputenc}
 
 % If you use usual TeX fonts, here is a starting point:
-\usepackage{times}
+%\usepackage{times}
+\usepackage{newcent}
+%\usepackage{palatino}
+%\usepackage{pslatex}
+
 % to change the font to something better, you can install the kpfonts package (if not already installed). To do so
 % go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
 
 % here we begin the document
 \begin{document}
-
-% The title:
-\begin{center}\begin{huge}\textsc{Allelia in Honor of Fr. Simon Le Moyne}\end{huge}\end{center}
 
 % Here we set the space around the initial.
 % Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
@@ -45,39 +47,202 @@
 % We set red lines here, comment it if you want black ones.
 \redlines
 
-% We set VII above the initial.
-%%\gresetfirstlineaboveinitial{\small \textsc{\textbf{VII}}}{\small \textsc{\textbf{VII}}}
+
+\frontmatter
+
+%%
+% Front Cover
+%%
+\title{ALLELUIA IN HONOR OF FR. SIMON LE MOYNE}
+\author{Ben Sung Hsu\\
+  \texttt{pobetiger(at)gmail.com}}
+\date{\today}
+\maketitle
+
+%%
+% Inside Cover
+%%
+
+\begin{paragraph}\noindent
+Some information about the book goes here.
+\end{paragraph}
+
+
+%%
+% Preface
+%%
+
+\chapter{PREFACE}
+\begin{paragraph}
+In the year 2009, I started working at my first job in Dalals, Texas. 
+And I also returned to my home parish at Sacred Heart of Jesus Chinese
+Parish in Plano, Texas. I started to sing at the choir and played the guitar
+for the English Mass. And soon I took over the music planner's position.
+My time away at college had provided me with some pratical skills in the planning
+and preparation for providing music at Mass. But it had not been a great experience
+of catechesis. \\
+
+(Greatly shortening the story) \\
+
+Through many years of studying and reading, I have gradually come
+to an understanding of the Church askes of us musicians to sing at the Mass.
+Out of these many years came the conclusion that as a musical community, we must
+follow the instructions of the GIRM and the spirit of the Second Vatican Council
+ to learn more about Gregorian Chant. In that light, various google and 
+youtube searches were performed. Corpus Christi Watershed, Musica Sacra, and 
+the Church Musician Association of America was found. And from the Corpus Christi
+Watershed website came this particular piece of Alleluia dedicated in honor of
+Fr. Simon Le Moyne. After listening to a couple of them, this piece proved not
+too difficult to learn and implement especially with the requirement to sing
+the correct verse proper to the feast. In addition, it came with a piano
+ accompliment that assist our young cantors to sing and is not too
+ difficult or overpowering. With some practice, our choir started using
+this Gospel Acclamation. This is the first time in our parish that the
+correct accompanying Alleluia Verse was used. There were times when the parishioners
+questioned about the change. But after some time, it became expected.\\
+
+When we were traveling to other parishes, and they would be singing from some
+seasonal or collection of verses in some hymnal from the 70's, my finacee looked at
+me and asked what happend to the Verses while point at it in the missalette she
+was looking at. I smiled and thank God for Corpus Christi Watershed and the CMAA
+in supporting and assisting us in our liturgical endeavors to sing the Mass.
+
+This collection is simply my rendition of all the verses so that I don't have to
+go to the website every week to download the PDF. I guess there's a point when 
+a man learns to fish, he attempts to open a restaurant along the seashore.
+
+\begin{center}Ben Sung Thomas More Hsu\\\today
+\end{center}
+
+\end{paragraph}
+
+
+%%
+% Dedication page
+%%
+
+\chapter{DEDICATION}
+\begin{paragraph}\\
+Dedicated Fr. Edward Kokarchik,\\
+who chanted the Exsultet and opened my eyes to the beauty of the Gregorian Chant
+\end{paragraph}
+
+%%
+% Table of Contents
+%%
+
+\tableofcontents
+\clearpage
+
+\mainmatter
+
+\chapter{Introduction}
+\clearpage
+% The title:
+\begin{center}\begin{huge}
+\textsc{Allelia in Honor of Fr. Simon Le Moyne}
+\end{huge}\end{center}
+
+\section{Compiler Notice}
+\begin{paragraph}
+This collection is compiled and reprinted by Ben Sung Hsu
+<pobetiger(at)gmail.com> for the express purpose of use at 
+Mass at Sacred Heart of Jesus Chinese Parish. It contains a collection
+of music from various sources. Unless otherwise noted, it contains
+the Gospel Acclamation published by Corpus Christi Watershed \\
+(\texttt{www.ccwatershed.org}) in honor of Fr. Simon Le Moyne. 
+The Gospel Acclamation for Lent is No. 6 published by the same.
+The Alleluia for Easter Triduum Vigil is the version found in the
+Roman Gradual in the Graduale Triplex published by Solemes Abby.
+\end{paragraph}
+
+\section{Generic Formula}
+
+\begin{paragraph}
+This first section records the formula for any given verse. 
+Subsequent verses used for each Sunday is then provided by section.
+\end{paragraph}
 
 % We type a text in the top right corner of the score:
 \commentary{{\small \emph{Corpus Christi Watershed}}}
-
-% and finally we include the score. The file must be in the same directory as this one.
-
-\begin{paragraph}\noindent
-This version of the Gospel Acclamation is published by 
-Corpus Christi Watershed (www.ccwatershed.org) in honor
-of Fr. Simon Le Moyne. Collected and reprinted by Ben Sung Hsu
-<pobetiger(at)gmail.com>.
-\newline
-\newline
-\end{paragraph}
-
 % Top-Level Alleluia:
 \includescore{alleluia.autogen-tex}
 
 % Generic Verse:
 \begin{paragraph}\noindent\begin{large}
-Generic Verse:
-\end{large}\newline\end{paragraph}
-
+Generic Verse:\\\\
+\end{large}\end{paragraph}
+\gresetfirstlineaboveinitial{\small \textsc{\textbf{V/.}}}{\small \textsc{\textbf{V/.}}}
 \includescore{Verse-Generic.autogen-tex}
 
-\newpage
+\section{Video Instructions}
+\begin{paragraph}
+You find video instructions on YouTube at the following URL:
+\end{paragraph}
+
+\chapter{ADVENT}
+
+% Top-Level Alleluia:
+\includescore{alleluia.autogen-tex}
+
+
+
+\chapter{CHRISTMAS}
+
+% Top-Level Alleluia:
+\includescore{alleluia.autogen-tex}
+
+
+\chapter{LENT}
+\section{Notes about Lent}
+\begin{paragraph}
+During the season of Lent, the Gospel Acclamation of Alleluia is
+not to be sung. Another acclamation is used.
+\end{paragraph}
+% need to use something else here
+
+
+
+\chapter{HOLY WEEK}
+
+% Top-Level Alleluia:
+\includescore{alleluia.autogen-tex}
+
+
+\chapter{\textsc{Sacred Triduum of the Pssion and Resurrection of Our Lord}}
+%{Passion and Resurrection of Our Lord}
+
+\section{Holy Thursday}
+\section{Easter Saturday, Vigil}
+\section{Easter Sunday, Dawn}
+\section{Easter Sunday, Day}
+% Top-Level Alleluia:
+\includescore{alleluia.autogen-tex}
+
+
+\chapter{PASCHAL TIDE}
 
 % Top-Level Alleluia:
 \includescore{alleluia.autogen-tex}
 
 % Verses Propers for each Sunday:
+
+% Easter-Sunday-6
+\begin{paragraph}\noindent\begin{large}
+Verse for 6th Sunday in Easter (ABC):
+\end{large}\newline\end{paragraph}
+
+\begin{paragraph}\noindent
+Not complete\newline
+\end{paragraph}
+
+\includescore{Easter-6.autogen-tex}
+
+\chapter{ORDINARY TIME}
+
+\includescore{alleluia.autogen-tex}
+
+
 % OT-Sunday-27
 \begin{paragraph}\noindent\begin{large}
 Verse for 27th Sunday in Ordinary Time (B):
