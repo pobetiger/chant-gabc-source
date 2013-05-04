@@ -4,7 +4,7 @@
 % This is a simple template for a LuaLaTeX document using gregorio scores.
 
 %\documentclass[11pt]{article} % use larger type; default would be 10pt
-\documentclass[11pt]{book} % use larger type; default would be 10pt
+\documentclass[11pt,oneside]{book} % use larger type; default would be 10pt
 
 % usual packages loading:
 \usepackage{luatextra}
@@ -69,6 +69,52 @@ Some information about the book goes here.
 
 
 %%
+% Dedication page
+%%
+
+\chapter{DEDICATION}
+\begin{paragraph}
+Dedicated \textsc{Fr. Edward Koharchik},\\
+who, as a deacon, chanted the Exsultet on Easter Vigil
+and opened my eyes to the beauty of the Gregorian Chant.
+\end{paragraph}
+
+\begin{paragraph}
+To the UCC 8PM Mass Worship Band:\\\\
+Lead by \textsc{Hyun-Gu Kang:\\
+Dan the Piano Man, Daniel O'Dell, Katie Halle}\\\\
+Lead by \textsc{Eric Patenaude:\\
+Joshua Martin, Mark Leatherman, Preston Achilike,\\
+Jacquelyn Sugianto, Chelsea Griffo,\\
+Patrick Sheffield, Mollie Alred}\\
+\end{paragraph}
+
+\begin{paragraph}
+To my friends at Sacred Heart Chinese Parish
+who encouraged my musical learning.
+\end{paragraph}
+
+\begin{paragraph}
+To my University of Dallas friends, especially
+\textsc{Deborah Haas, Theresa Scott, Matt and Debbie Sercelys}
+who encouraged my musical learning.
+\end{paragraph}
+
+\begin{paragraph}
+My beloved wife, Janessa, for all the prayers
+and support.
+\end{paragraph}
+
+\vspace{22 pt}
+
+\begin{center}\begin{large}
+\textsc{To God, I give my thanks, \\
+for He is the one that gave me everything.}
+\end{large}\end{center}
+
+
+
+%%
 % Preface
 %%
 
@@ -118,26 +164,16 @@ a man learns to fish, he attempts to open a restaurant along the seashore.
 
 
 %%
-% Dedication page
-%%
-
-\chapter{DEDICATION}
-\begin{paragraph}\\
-Dedicated Fr. Edward Kokarchik,\\
-who chanted the Exsultet and opened my eyes to the beauty of the Gregorian Chant
-\end{paragraph}
-
-%%
 % Table of Contents
 %%
 
+\renewcommand*\contentsname{\textsc{Table of Contents}}
 \tableofcontents
-\clearpage
+
 
 \mainmatter
 
 \chapter{Introduction}
-\clearpage
 % The title:
 \begin{center}\begin{huge}
 \textsc{Allelia in Honor of Fr. Simon Le Moyne}
@@ -242,6 +278,21 @@ Not complete\newline
 
 \includescore{alleluia.autogen-tex}
 
+% OT-Sunday-18
+% also St. John Vianny
+\begin{paragraph}\noindent\begin{large}
+Verse for 18th Sunday in Ordinary Time (C):
+\end{large}\newline\end{paragraph}
+
+%\includescore{OT-Sunday-18.autogen-tex}
+
+% OT-Sunday-19
+% also St. Claire
+\begin{paragraph}\noindent\begin{large}
+Verse for 19th Sunday in Ordinary Time (C):
+\end{large}\newline\end{paragraph}
+
+%\includescore{OT-Sunday-19.autogen-tex}
 
 % OT-Sunday-27
 \begin{paragraph}\noindent\begin{large}
