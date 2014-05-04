@@ -1,0 +1,67 @@
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a LuaLaTeX document using gregorio scores.
+
+%\documentclass[11pt]{article} % use larger type; default would be 10pt
+\documentclass[11pt,twoside,landscape]{article} % use larger type; default would be 10pt
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage[margin=0.25in]{geometry} % See geometry.pdf to learn the layout options. There are lots.
+%\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{letterpaper}
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{fullpage} % to reduce the margins
+
+% choose the language of the document here
+\usepackage[latin]{babel}
+
+% use the two following package for using normal TeX fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{multicol}
+
+% If you use usual TeX fonts, here is a starting point:
+%\usepackage{times}
+\usepackage{newcent}
+%\usepackage{palatino}
+%\usepackage{pslatex}
+
+% to change the font to something better, you can install the kpfonts package (if not already installed). To do so
+% go open the "TeX Live Manager" in the Menu Start->All Programs->TeX Live 2010
+
+% here we begin the document
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+  {\fontsize{43}{43}\selectfont #1}%
+}
+
+\addtolength{\topmargin}{-.50in}
+
+\setgrefactor{12}
+\pagenumbering{gobble}
+
+% We set red lines here, comment it if you want black ones.
+\redlines
+
+\begin{multicols}{2}
+\includescore{gloria-viii.autogen-tex}
+\columnbreak
+\includescore{sanctus-xviii.autogen-tex}
+\begin{paragraph}
+\newline
+\end{paragraph}
+\includescore{agnus-dei-xviii.autogen-tex}
+\end{multicols}
+
+\end{document}
+
